@@ -1,0 +1,30 @@
+{
+  "name": "gitmulti",
+  "version": "0.0.1",
+  "description": "Simple Node system to manage multiple Repositories into the same repo",
+  "main": "gitmulti.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CLDMV/gitmulti.git"
+  },
+  "keywords": [
+    "git",
+    "repo",
+    "multiple",
+    "repos",
+    "multiple"
+  ],
+  "author": "Shinrai <git@cldmv.net> (http://cldmv.net)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/CLDMV/gitmulti/issues"
+  },
+  "homepage": "https://github.com/CLDMV/gitmulti#readme",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "lodash": "^4.17.11"
+  }
+}
