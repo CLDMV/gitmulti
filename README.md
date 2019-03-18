@@ -13,3 +13,8 @@ From there the tool will do it's magic of moving files around, issueing the git 
 
 # What this tool does NOT do:
 It's a simple tool. It will only commit, push, and pull. Anything else from the git toolset will be left out (for now at least).
+
+## ❤️ Contributors
+
+This project exists thanks to all the people who contribute. [[Contributors](https://github.com/CLDMV/gitmulti/graphs/contributors)].
+<a href="https://github.com/CLDMV/gitmulti/graphs/contributors"><img src="https://image.cldmv.net/github/contributors/?repo=gitmulti" /></a>
