@@ -1,10 +1,15 @@
 {
   "name": "gitmulti",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple Node system to manage multiple Repositories into the same repo",
   "main": "gitmulti.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/run-vitest.mjs",
+    "build": "echo '✓ no build step (stopgap: the CI coverage-badge job runs `npm run build`)'",
+    "build:ci": "echo '✓ no build step'",
+    "test:watch": "vitest --config .configs/vitest.config.mjs",
+    "coverage": "node tests/run-vitest.mjs --coverage-quiet",
+    "ci:coverage": "npm run coverage"
   },
   "repository": {
     "type": "git",
@@ -24,7 +29,11 @@
   },
   "homepage": "https://github.com/CLDMV/gitmulti#readme",
   "dependencies": {
-    "commander": "^2.19.0",
-    "lodash": "^4.17.11"
+    "commander": "^2.19.0"
+  },
+  "devDependencies": {
+    "@cldmv/vitest-runner": "^1.2.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "vitest": "^4.1.10"
   }
 }
