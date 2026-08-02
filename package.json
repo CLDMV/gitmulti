@@ -4,7 +4,12 @@
   "description": "Simple Node system to manage multiple Repositories into the same repo",
   "main": "gitmulti.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/run-vitest.mjs",
+    "build": "echo '✓ no build step (stopgap: the CI coverage-badge job runs `npm run build`)'",
+    "build:ci": "echo '✓ no build step'",
+    "test:watch": "vitest --config .configs/vitest.config.mjs",
+    "coverage": "node tests/run-vitest.mjs --coverage-quiet",
+    "ci:coverage": "npm run coverage"
   },
   "repository": {
     "type": "git",
@@ -26,5 +31,10 @@
   "dependencies": {
     "commander": "^2.19.0",
     "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@cldmv/vitest-runner": "^1.2.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "vitest": "^4.1.10"
   }
 }
