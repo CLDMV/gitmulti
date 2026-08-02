@@ -29,8 +29,7 @@
   },
   "homepage": "https://github.com/CLDMV/gitmulti#readme",
   "dependencies": {
-    "commander": "^2.19.0",
-    "lodash": "^4.17.11"
+    "commander": "^2.19.0"
   },
   "devDependencies": {
     "@cldmv/vitest-runner": "^1.2.0",
