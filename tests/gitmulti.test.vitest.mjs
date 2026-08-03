@@ -35,7 +35,7 @@
  * in-process — no matching flag/command, which falls through to commander's
  * `defaultExecutable` ("list") and really attempts to spawn a `gitmulti-list`
  * executable that does not exist in this package — is characterized instead
- * via a real, fully isolated subprocess in gitmulti.cli.test.mjs, so a failed
+ * via a real, fully isolated subprocess in gitmulti.cli.test.vitest.mjs, so a failed
  * spawn attempt never touches this test's own process.
  */
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
