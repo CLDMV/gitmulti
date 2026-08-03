@@ -2,11 +2,11 @@
  * End-to-end characterization of the gitmulti CLI entry point via a real,
  * fully isolated subprocess (spawnSync of `node gitmulti.js <args>`).
  *
- * This complements gitmulti.test.mjs, which drives gitmulti.js in-process for
+ * This complements gitmulti.test.vitest.mjs, which drives gitmulti.js in-process for
  * statement/branch coverage. Two scenarios cannot be driven that way without
  * either mocking `child_process` (which does not work here — commander's
  * internal `require("child_process")` is not reachable by `vi.mock`, see the
- * comment at the top of gitmulti.test.mjs) or letting a real spawn attempt
+ * comment at the top of gitmulti.test.vitest.mjs) or letting a real spawn attempt
  * happen inside the test worker process (which leaks an async `process.exit`
  * call that fires after the test body returns and trips Vitest's
  * unexpected-exit detector). Running the real CLI as a genuine child process
@@ -15,7 +15,7 @@
  *
  * This does not shell out to `git` and never touches a real repository or
  * the filesystem beyond the ENOENT spawn attempt below — gitmulti.js has no
- * git/`.gitmulti` handling of its own yet (see gitmulti.test.mjs's file
+ * git/`.gitmulti` handling of its own yet (see gitmulti.test.vitest.mjs's file
  * banner); the "list" subcommand it declares as its default is meant to be
  * an executable sibling file (`gitmulti-list`) that does not exist in this
  * package, so invoking it is expected, currently, to fail.
