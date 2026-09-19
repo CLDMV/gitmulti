@@ -1,6 +1,6 @@
 {
   "name": "gitmulti",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Simple Node system to manage multiple Repositories into the same repo",
   "main": "gitmulti.js",
   "scripts": {
