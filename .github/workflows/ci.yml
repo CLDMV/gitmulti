@@ -267,7 +267,7 @@ jobs:
             # ── Type check (runs inside the coverage-badge job) ────────────────────
             # Skipped deliberately: plain JavaScript package with no TypeScript sources
             # or shipped type declarations, so there is no meaningful JS type-check to
-            # run. ESLint is the static-analysis net.
+            # run. There is no type check or lint check in this repo yet.
             type_check_command: ${{ github.event.inputs.type_check_command || 'npm run test:types' }}
             skip_type_check: true
 
