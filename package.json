@@ -1,6 +1,6 @@
 {
   "name": "gitmulti",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Simple Node system to manage multiple Repositories into the same repo",
   "main": "gitmulti.js",
   "scripts": {
@@ -35,8 +35,8 @@
   "devDependencies": {
     "@cldmv/configs": "^1.2.0",
     "@cldmv/fix-headers": "^2.1.1",
-    "@cldmv/vitest-runner": "^1.2.0",
-    "@vitest/coverage-v8": "^5.0.0",
+    "@cldmv/vitest-runner": "^1.5.1",
+    "@vitest/coverage-v8": "^5.0.2",
     "vitest": "^5.0.1"
   }
 }
