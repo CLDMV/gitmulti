@@ -1,4 +1,19 @@
 /**
+ *
+ *	@Project: gitmulti
+ *	@Filename: /tests/gitmulti.test.vitest.mjs
+ *	@Date: 2026-08-02T23:52:42-07:00 (1785739962)
+ *	@Author: Nate Corcoran <CLDMV>
+ *	@Email: <Shinrai@users.noreply.github.com>
+ *	-----
+ *	@Last modified by: Nate Corcoran <CLDMV> (Shinrai@users.noreply.github.com)
+ *	@Last modified time: 2026-10-02T11:30:32-07:00 (1790965832)
+ *	-----
+ *	@Copyright: Copyright (c) 2013-2026 Catalyzed Motivation Inc. All rights reserved.
+ *
+ */
+
+/**
  * Characterization tests for gitmulti.js.
  *
  * gitmulti.js is a tiny CommonJS entry point: on require, it configures a
