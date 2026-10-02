@@ -1,6 +1,6 @@
 {
   "name": "gitmulti",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Simple Node system to manage multiple Repositories into the same repo",
   "main": "gitmulti.js",
   "scripts": {
@@ -9,7 +9,8 @@
     "build:ci": "echo '✓ no build step'",
     "test:watch": "vitest --config .configs/vitest.config.mjs",
     "coverage": "node tests/run-vitest.mjs --coverage-quiet",
-    "ci:coverage": "npm run coverage"
+    "ci:coverage": "npm run coverage",
+    "fix:headers": "fix-headers --config .configs/fix-headers.json"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,8 @@
     "commander": "^2.19.0"
   },
   "devDependencies": {
+    "@cldmv/configs": "^1.2.0",
+    "@cldmv/fix-headers": "^2.1.1",
     "@cldmv/vitest-runner": "^1.2.0",
     "@vitest/coverage-v8": "^5.0.0",
     "vitest": "^5.0.1"
