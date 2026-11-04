@@ -6,7 +6,7 @@
 #	@Email: <Shinrai@users.noreply.github.com>
 #	-----
 #	@Last modified by: Nate Corcoran <CLDMV> (Shinrai@users.noreply.github.com)
-#	@Last modified time: 2026-10-02T11:30:28-07:00 (1790965828)
+#	@Last modified time: 2026-11-03T21:56:28-08:00 (1793771788)
 #	-----
 #	@Copyright: Copyright (c) 2013-2026 Catalyzed Motivation Inc. All rights reserved.
 #
@@ -251,7 +251,10 @@ jobs:
             lint_fix_command: ${{ github.event.inputs.lint_fix_command || 'npm run lint:fix --if-present' }}
             lint_command: ${{ github.event.inputs.lint_command || 'npm run lint --if-present' }}
             format_check_command: ${{ github.event.inputs.format_check_command || 'npm run format:check --if-present' }}
-            build_command: "echo '✓ no build step'"
+            build_command: "npm run build:ci"
+            # build:ci (lint + format:check + types:build + the tsup build into dist/ and bin/)
+            # leaves src/ in place, so coverage still measures src/** after the build runs.
+            coverage_build_command: "npm run build:ci"
             skip_performance_tests: false
             skip_matrix_tests: false
 
@@ -270,11 +273,8 @@ jobs:
             upload_coverage_artifact: ${{ github.event.inputs.upload_coverage_artifact != 'false' }}
 
             # ── Type check (runs inside the coverage-badge job) ────────────────────
-            # Skipped deliberately: plain JavaScript package with no TypeScript sources
-            # or shipped type declarations, so there is no meaningful JS type-check to
-            # run. There is no type check or lint check in this repo yet.
             type_check_command: ${{ github.event.inputs.type_check_command || 'npm run test:types' }}
-            skip_type_check: true
+            skip_type_check: ${{ github.event.inputs.skip_type_check == 'true' }}
 
             # ── PR coverage badge ─────────────────────────────────────────────────
             # Injects a Shields.io badge + breakdown table directly into the PR body
