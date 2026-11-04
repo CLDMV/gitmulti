@@ -4,17 +4,18 @@ Simple Node system to manage multiple Repositories into the same repo
 
 ## ✨ What's New
 
-### Latest: v0.0.12 (October 2026)
+### Latest: v0.1.0 (November 2026)
 
-- **Dev-tooling dependency bump ([#39](https://github.com/CLDMV/gitmulti/pull/39), [#42](https://github.com/CLDMV/gitmulti/pull/42))** — `@cldmv/fix-headers` moves from 2.1.1 to 2.2.0, so `@Last modified by` now follows content edits only, and `@cldmv/configs` moves from 1.2.0 to 1.2.4, whose shared config no longer forces the author fields. Neither changed any file header here. The CLI is unchanged; it's a drop-in replacement for the previous version.
-- [View full v0.0.12 Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.0.12.md)
+- **A working CLI, rebuilt as ESM on commander 15 ([#68](https://github.com/CLDMV/gitmulti/pull/68))**: `gitmulti list [dir]` lists the `.gitmulti` files under a directory, and the package now installs a `gitmulti` executable. From code, `findGitmultiFiles`, `createProgram` and `run` work through both `import` and `require()`. `require("gitmulti")` no longer runs the CLI on load, and the package needs Node.js 22.12.0 or newer.
+- **Toolchain and security ([#66](https://github.com/CLDMV/gitmulti/pull/66) and the Dependabot bumps since v0.0.12)**: Vitest 5.1, `@cldmv/vitest-runner` 1.6.1, `@cldmv/fix-headers` 2.2.6 and `@cldmv/configs` 1.4.0, plus `overrides` that pin `katex` and `minimatch` to patched versions. These clear every open Dependabot alert. Developing the package needs Node.js 22.22.0 or newer.
+- [View full v0.1.0 Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.1.0.md)
 
 ### Recent Releases
 
+- **v0.0.12** (October 2026) — `@cldmv/fix-headers` 2.2.0 and `@cldmv/configs` 1.2.4 (dev dependencies only); no header or runtime change ([Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.0.12.md))
 - **v0.0.11** (October 2026) — CI only: the in-repo PR mirror job now always runs and reports under a non-required name instead of being skipped ([Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.0.11.md))
 - **v0.0.10** (October 2026) — CI only: a skipped PR-run mirror job no longer satisfies the `✅ Required PR Check` ruleset gate; `@cldmv/vitest-runner` 1.5.1 ([Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.0.10.md))
 - **v0.0.9** (October 2026) — workflows synced to the CLDMV/.github v4.29.2 templates, bundle-size workflow, shared fix-headers config (comment-only header in `gitmulti.js`); no runtime change ([Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.0.9.md))
-- **v0.0.8** (September 2026) — vitest and `@vitest/coverage-v8` 5.0.1 (dev dependencies only) ([Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.0.8.md))
 
 📚 **For complete version history and detailed release notes, see the [docs/changelog/](https://github.com/CLDMV/gitmulti/tree/master/docs/changelog/) folder.**
 
