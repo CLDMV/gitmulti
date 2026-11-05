@@ -6,7 +6,7 @@
 #	@Email: <Shinrai@users.noreply.github.com>
 #	-----
 #	@Last modified by: Nate Corcoran <CLDMV> (Shinrai@users.noreply.github.com)
-#	@Last modified time: 2026-10-02T11:30:28-07:00 (1790965828)
+#	@Last modified time: 2026-11-03T21:56:28-08:00 (1793771788)
 #	-----
 #	@Copyright: Copyright (c) 2013-2026 Catalyzed Motivation Inc. All rights reserved.
 #
@@ -40,7 +40,7 @@ jobs:
         with:
             build_command: "npm run build:ci"
             # Leading `*` is required: the measure step only walks directories, so a bare top-level filename matches nothing.
-            dist_paths: "*gitmulti.js"
+            dist_paths: "dist/**,bin/**" # the published runtime files (package.json `files`)
             # warning_pct: 5
             # warning_bytes: 500
             # comment_mode: "update"
