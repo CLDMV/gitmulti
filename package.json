@@ -1,6 +1,6 @@
 {
 	"name": "gitmulti",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Simple Node system to manage multiple Repositories into the same repo",
 	"type": "module",
 	"main": "./dist/index.cjs",
@@ -44,7 +44,8 @@
 		"build": "tsup",
 		"build:ci": "npm run lint && npm run format:check && npm run types:build && npm run build",
 		"prepack": "npm run types:build && npm run build",
-		"fix:headers": "fix-headers --config .configs/fix-headers.json"
+		"fix:headers": "fix-headers --config .configs/fix-headers.json",
+		"prepare": "node -e \"import('./.githooks/install.mjs').catch(()=>{})\""
 	},
 	"repository": {
 		"type": "git",
@@ -58,7 +59,7 @@
 		"multiple"
 	],
 	"author": "Shinrai <git@cldmv.net> (http://cldmv.net)",
-	"license": "GPL-3.0",
+	"license": "Apache-2.0",
 	"engines": {
 		"node": ">=22.12.0"
 	},

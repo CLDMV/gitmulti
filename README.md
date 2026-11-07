@@ -64,3 +64,7 @@ It's a simple tool. It will only commit, push, and pull. Anything else from the 
 
 This project exists thanks to all the people who contribute. [[Contributors](https://github.com/CLDMV/gitmulti/graphs/contributors)].
 <a href="https://github.com/CLDMV/gitmulti/graphs/contributors"><img src="https://image.cldmv.net/github/contributors/?repo=gitmulti" alt="gitmulti contributors" /></a>
+
+## 📄 License
+
+Apache-2.0 © Shinrai / CLDMV. See [LICENSE](LICENSE).
