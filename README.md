@@ -4,18 +4,18 @@ Simple Node system to manage multiple Repositories into the same repo
 
 ## ✨ What's New
 
-### Latest: v0.1.0 (November 2026)
+### Latest: v0.1.1 (November 2026)
 
-- **A working CLI, rebuilt as ESM on commander 15 ([#68](https://github.com/CLDMV/gitmulti/pull/68))**: `gitmulti list [dir]` lists the `.gitmulti` files under a directory, and the package now installs a `gitmulti` executable. From code, `findGitmultiFiles`, `createProgram` and `run` work through both `import` and `require()`. `require("gitmulti")` no longer runs the CLI on load, and the package needs Node.js 22.12.0 or newer.
-- **Toolchain and security ([#66](https://github.com/CLDMV/gitmulti/pull/66) and the Dependabot bumps since v0.0.12)**: Vitest 5.1, `@cldmv/vitest-runner` 1.6.1, `@cldmv/fix-headers` 2.2.6 and `@cldmv/configs` 1.4.0, plus `overrides` that pin `katex` and `minimatch` to patched versions. These clear every open Dependabot alert. Developing the package needs Node.js 22.22.0 or newer.
-- [View full v0.1.0 Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.1.0.md)
+- **Apache-2.0 ([#69](https://github.com/CLDMV/gitmulti/pull/69))**: gitmulti is now licensed under Apache-2.0 instead of GPL-3.0.
+- **The first published release with the v0.1.0 CLI ([#70](https://github.com/CLDMV/gitmulti/pull/70))**: v0.1.0's release run failed on Node.js 22.12.0, below the 22.22.0 dev floor, so no v0.1.0 tag or release was created. Release builds now start at 22.22.0, so v0.1.1 ships everything listed under v0.1.0, including the `gitmulti list` command and the `require("gitmulti").run()` change. Contributors also get a pre-commit hook that checks lint and formatting ([#72](https://github.com/CLDMV/gitmulti/pull/72)).
+- [View full v0.1.1 Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.1.1.md)
 
 ### Recent Releases
 
+- **v0.1.0** (November 2026) — rebuilt as ESM on commander 15 with a working `gitmulti list` CLI and an `import`/`require()` API; needs Node.js 22.12.0 or newer. Never published: it ships with v0.1.1 ([Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.1.0.md))
 - **v0.0.12** (October 2026) — `@cldmv/fix-headers` 2.2.0 and `@cldmv/configs` 1.2.4 (dev dependencies only); no header or runtime change ([Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.0.12.md))
 - **v0.0.11** (October 2026) — CI only: the in-repo PR mirror job now always runs and reports under a non-required name instead of being skipped ([Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.0.11.md))
 - **v0.0.10** (October 2026) — CI only: a skipped PR-run mirror job no longer satisfies the `✅ Required PR Check` ruleset gate; `@cldmv/vitest-runner` 1.5.1 ([Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.0.10.md))
-- **v0.0.9** (October 2026) — workflows synced to the CLDMV/.github v4.29.2 templates, bundle-size workflow, shared fix-headers config (comment-only header in `gitmulti.js`); no runtime change ([Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.0.9.md))
 
 📚 **For complete version history and detailed release notes, see the [docs/changelog/](https://github.com/CLDMV/gitmulti/tree/master/docs/changelog/) folder.**
 
