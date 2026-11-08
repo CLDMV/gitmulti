@@ -42,7 +42,7 @@ run(["node", "gitmulti", "list", "."]); // what the gitmulti executable does
 ### Requirements
 
 - **Node.js 22.12.0 or newer**, the floor of `commander` 15. `require()` needs Node.js 22.13.0 or newer (`require(esm)`); on older versions the CommonJS entry throws `ERR_REQUIRE_ESM` and points to `import()`.
-- Developing gitmulti needs Node.js 22.22.0 or newer (`devEngines`). In a checkout, the `gitmulti-dev` export condition loads `src/` instead of the build in `dist/`: `export NODE_OPTIONS=--conditions=gitmulti-dev`. The tests use it automatically; `npm run build` builds `dist/` and `bin/`.
+- Developing gitmulti needs Node.js 22.22.0 or newer (`devEngines`). In a checkout, the `gitmulti-dev` export condition loads `src/` instead of the build in `dist/`: `export NODE_OPTIONS=--conditions=gitmulti-dev`. The tests use it automatically; `npm run build` builds `dist/` and `bin/`. `npm test` runs the suite against `src/`, then `npm run test:cjs` checks the CommonJS entry on the build and `npm run test:dist` runs the suite again against `dist/`.
 
 ## Preface
 
