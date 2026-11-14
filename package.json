@@ -1,6 +1,6 @@
 {
 	"name": "gitmulti",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Simple Node system to manage multiple Repositories into the same repo",
 	"type": "module",
 	"main": "./dist/index.cjs",
@@ -34,17 +34,19 @@
 		"lint:fix": "eslint --config .configs/eslint.config.mjs . --fix",
 		"format": "prettier --config .configs/prettier.config.mjs --write .",
 		"format:check": "prettier --config .configs/prettier.config.mjs --check .",
-		"test": "node tests/run-vitest.mjs && npm run test:cjs",
+		"test": "node tests/run-vitest.mjs && npm run test:cjs && npm run test:dist",
 		"test:cjs": "npm run build && node --conditions=gitmulti-dev --test tests/cjs/entry.test.cjs",
+		"test:dist": "npm run build && node tests/run-vitest.mjs --mode=dist",
 		"test:watch": "vitest --config .configs/vitest.config.mjs",
-		"test:types": "tsc -p .configs/tsconfig.json --noEmit",
-		"coverage": "node tests/run-vitest.mjs --coverage-quiet && npm run test:cjs",
-		"ci:coverage": "npm run coverage",
+		"types:check": "tsc -p .configs/tsconfig.json --noEmit",
+		"coverage": "node tests/run-vitest.mjs --coverage-quiet",
+		"ci:coverage": "npm run coverage && npm run test:cjs && npm run test:dist",
 		"types:build": "tsc -p .configs/tsconfig.json",
 		"build": "tsup",
 		"build:ci": "npm run lint && npm run format:check && npm run types:build && npm run build",
 		"prepack": "npm run types:build && npm run build",
-		"fix:headers": "fix-headers --config .configs/fix-headers.json"
+		"fix:headers": "fix-headers --config .configs/fix-headers.json",
+		"prepare": "node -e \"import('./.githooks/install.mjs').catch(()=>{})\""
 	},
 	"repository": {
 		"type": "git",
@@ -58,7 +60,7 @@
 		"multiple"
 	],
 	"author": "Shinrai <git@cldmv.net> (http://cldmv.net)",
-	"license": "GPL-3.0",
+	"license": "Apache-2.0",
 	"engines": {
 		"node": ">=22.12.0"
 	},
@@ -74,12 +76,12 @@
 	},
 	"homepage": "https://github.com/CLDMV/gitmulti#readme",
 	"dependencies": {
-		"commander": "^15.0.0"
+		"commander": "^15.1.0"
 	},
 	"devDependencies": {
 		"@cldmv/configs": "^1.4.0",
 		"@cldmv/fix-headers": "^2.2.6",
-		"@cldmv/prettier-plugin-jsonv": "^1.2.1",
+		"@cldmv/prettier-plugin-jsonv": "^1.2.2",
 		"@cldmv/vitest-runner": "^1.6.1",
 		"@types/node": "^26.6.6",
 		"@vitest/coverage-v8": "^5.1.0",

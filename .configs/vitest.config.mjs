@@ -7,7 +7,7 @@
  *	@Email: <Shinrai@users.noreply.github.com>
  *	-----
  *	@Last modified by: Nate Corcoran <CLDMV> (Shinrai@users.noreply.github.com)
- *	@Last modified time: 2026-11-03T21:56:28-08:00 (1793771788)
+ *	@Last modified time: 2026-11-07T21:08:19-08:00 (1794114499)
  *	-----
  *	@Copyright: Copyright (c) 2013-2026 Catalyzed Motivation Inc. All rights reserved.
  *
@@ -21,9 +21,10 @@ import path from "node:path";
 // Anchor the project root to the package directory so include/exclude work no matter what cwd vitest runs from.
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
-export default mergeConfig(
-	mergeConfig(base, devCondition({ root })),
-	defineConfig({
+// `--mode=dist` (npm run test:dist) leaves the gitmulti-dev condition off, so tests that import "gitmulti" by name
+// run against the build in dist/ instead of src/.
+export default defineConfig(({ mode }) =>
+	mergeConfig(mode === "dist" ? base : mergeConfig(base, devCondition({ root })), {
 		root,
 		test: {
 			testTimeout: 30000,
