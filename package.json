@@ -81,7 +81,7 @@
 	"devDependencies": {
 		"@cldmv/configs": "^1.4.0",
 		"@cldmv/fix-headers": "^2.2.6",
-		"@cldmv/prettier-plugin-jsonv": "^1.2.1",
+		"@cldmv/prettier-plugin-jsonv": "^1.2.2",
 		"@cldmv/vitest-runner": "^1.6.1",
 		"@types/node": "^26.6.6",
 		"@vitest/coverage-v8": "^5.1.0",
