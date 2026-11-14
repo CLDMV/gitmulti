@@ -76,7 +76,7 @@
 	},
 	"homepage": "https://github.com/CLDMV/gitmulti#readme",
 	"dependencies": {
-		"commander": "^15.0.0"
+		"commander": "^15.1.0"
 	},
 	"devDependencies": {
 		"@cldmv/configs": "^1.4.0",
