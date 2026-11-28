@@ -8,6 +8,7 @@ Simple Node system to manage multiple Repositories into the same repo
 
 - **Apache-2.0 ([#69](https://github.com/CLDMV/gitmulti/pull/69))**: gitmulti is now licensed under Apache-2.0 instead of GPL-3.0.
 - **The first published release with the v0.1.0 CLI ([#70](https://github.com/CLDMV/gitmulti/pull/70))**: v0.1.0's release run failed on Node.js 22.12.0, below the 22.22.0 dev floor, so no v0.1.0 tag or release was created. Release builds now start at 22.22.0, so v0.1.1 ships everything listed under v0.1.0, including the `gitmulti list` command and the `require("gitmulti").run()` change. Contributors also get a pre-commit hook that checks lint and formatting ([#72](https://github.com/CLDMV/gitmulti/pull/72)).
+- **CI and dev tooling ([#85](https://github.com/CLDMV/gitmulti/pull/85), [#86](https://github.com/CLDMV/gitmulti/pull/86))**: superseded CI runs are cancelled, and the CLDMV dev tools and Dependabot groups are up to date. Nothing in the published package changed.
 - [View full v0.1.1 Changelog](https://github.com/CLDMV/gitmulti/blob/master/docs/changelog/v0/v0.1.1.md)
 
 ### Recent Releases
