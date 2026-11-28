@@ -1,0 +1,37 @@
+{
+	"version": 1,
+	"commit": "5be2de11b903ee2a0715d247a3daf7d0bf0d79e8",
+	"files": {
+		"src/bin/gitmulti.mjs": {},
+		"src/cli.mjs": {
+			"createProgram": [
+				"tests/bin.test.vitest.mjs",
+				"tests/cli.test.vitest.mjs"
+			],
+			"(anonymous_1)": [
+				"tests/bin.test.vitest.mjs"
+			],
+			"(anonymous_2)": [
+				"tests/bin.test.vitest.mjs",
+				"tests/cli.test.vitest.mjs"
+			],
+			"run": [
+				"tests/bin.test.vitest.mjs",
+				"tests/cli.test.vitest.mjs"
+			]
+		},
+		"src/index.mjs": {},
+		"src/list.mjs": {
+			"findGitmultiFiles": [
+				"tests/bin.test.vitest.mjs",
+				"tests/cli.test.vitest.mjs",
+				"tests/list.test.vitest.mjs"
+			],
+			"(anonymous_1)": [
+				"tests/bin.test.vitest.mjs",
+				"tests/cli.test.vitest.mjs",
+				"tests/list.test.vitest.mjs"
+			]
+		}
+	}
+}
